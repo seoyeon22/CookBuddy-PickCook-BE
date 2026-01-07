@@ -12,6 +12,7 @@ server:
     key-store-type: ${SSL_KEYSTORE_TYPE:PKCS12}               # 인증서 타입
     key-alias: ${SSL_KEY_ALIAS}                               # SSL 키 별칭
   address: 0.0.0.0 # 모든 IP에서 접근 가능
+  forward-headers-strategy: native
 
 # =================================================================
 # 관리 엔드포인트 설정
@@ -31,6 +32,9 @@ management:
 spring:
   application:
     name: pickcook
+
+  profiles:
+    active: local
 
   # =================================================================
   # 데이터베이스 설정
@@ -65,7 +69,8 @@ spring:
             client-secret: ${KAKAO_CLIENT_SECRET}
             client-name: Kakao
             authorization-grant-type: authorization_code
-            redirect-uri: ${KAKAO_REDIRECT_URI}
+#            redirect-uri: ${KAKAO_REDIRECT_URI}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
             scope: profile_nickname
             client-authentication-method: client_secret_post
         provider:

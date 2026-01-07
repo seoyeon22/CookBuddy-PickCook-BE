@@ -77,7 +77,7 @@ public class SwaggerConfig {
                 .contact(new Contact()
                         .name("PickCook 개발팀")
                         .email("support@pickcook.kro.kr")
-                        .url("https://www.pickcook.kro.kr"));
+                        .url("https://pick-cook.kro.kr:8443"));
     }
 
     /**
@@ -86,14 +86,11 @@ public class SwaggerConfig {
     private List<Server> serverList() {
         return Arrays.asList(
                 new Server()
-                        .url("https://www.pickcook.kro.kr")
+                        .url("https://pick-cook.kro.kr:8443")
                         .description("운영 서버"),
                 new Server()
                         .url("http://localhost:8080")
-                        .description("로컬 개발 서버"),
-                new Server()
-                        .url("http://52.78.5.241")
-                        .description("개발 서버")
+                        .description("로컬 개발 서버")
         );
     }
 

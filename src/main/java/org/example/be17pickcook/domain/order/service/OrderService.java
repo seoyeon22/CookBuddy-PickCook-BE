@@ -14,14 +14,12 @@ import org.example.be17pickcook.domain.order.repository.OrderItemRepository;
 import org.example.be17pickcook.domain.order.repository.OrderRepository;
 import org.example.be17pickcook.domain.order.repository.RefundRepository;
 import org.example.be17pickcook.domain.review.repository.ReviewRepository;
-import org.example.be17pickcook.domain.order.model.PaymentClientJvmWrapperKt;
 import org.example.be17pickcook.domain.user.model.User;
 import org.example.be17pickcook.domain.user.model.UserDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.*;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -30,7 +28,6 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;

@@ -40,12 +40,10 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();  // 변수명 변경
 
-        corsConfiguration.addAllowedOrigin("https://www.pickcook.kro.kr");
-        corsConfiguration.addAllowedOrigin("https://admin.pickcook.kro.kr");
-        corsConfiguration.addAllowedOrigin("https://52.78.5.241");
-        corsConfiguration.addAllowedOrigin("http://52.78.5.241");
-        corsConfiguration.addAllowedOrigin("http://192.0.5.100");
         corsConfiguration.addAllowedOrigin("https://pick-cook.kro.kr");
+        corsConfiguration.setAllowedOrigins(
+                List.of("https://pick-cook.kro.kr:8443")
+        );
         corsConfiguration.addAllowedOriginPattern("http://localhost:*");
         corsConfiguration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         corsConfiguration.setAllowedHeaders(List.of("*"));
@@ -60,14 +58,6 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
-        http.oauth2Login(config -> {
-                    config.userInfoEndpoint(
-                            endpoint ->
-                                    endpoint.userService(oAuth2UserService)
-                    );
-                    config.successHandler(oAuth2AuthenticationSuccessHandler);
-                }
-        );
 
         http.authorizeHttpRequests(
                 (auth) -> auth
@@ -79,12 +69,21 @@ public class SecurityConfig {
                                 "/api/user/find-email",
                                 "/api/user/request-password-reset",
                                 "/api/user/reset-password",
-                                "/oauth2/authorization/kakao",
-                                "/login/oauth2/code/kakao"
+                                "/oauth2/**",
+                                "/login/oauth2/**"
                         ).permitAll()
                         .requestMatchers("/api/user/addresses/**").authenticated()
                         .requestMatchers("/test/*").hasRole("USER")
                         .anyRequest().permitAll()
+        );
+
+        http.oauth2Login(config -> {
+                    config.userInfoEndpoint(
+                            endpoint ->
+                                    endpoint.userService(oAuth2UserService)
+                    );
+                    config.successHandler(oAuth2AuthenticationSuccessHandler);
+                }
         );
 
         http.cors(cors ->
