@@ -1,26 +1,14 @@
 <br>
 
 <h1 align="center" style="color: #FFD675;">🍽️ PickCook </h1><br>
-<h3 align="center">5팀 - Team CookBuddy </h3><br>
-
-## 🕵️ 팀원 소개
-
-<div align="center">
-
-| <img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=http://t1.daumcdn.net/news/201707/25/seouleconomy/20170725083653488jtol.jpg" width="100" height="100"/> | <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gEFr3b-5mhcz5mp8GNK41xQauma4MPL5nA&s" width="100" height="100"/> | <img src="https://i.namu.wiki/i/TQwZWqyeyNKMffr3p9A3Bxah_MmOR8das_6Pqr0zNfCWwQG-VjX4XyzdDSDtoW2MPcBnzFEhTVY1Ebm7lECvaw.webp" width="100" height="100"/> | <img src="https://i.namu.wiki/i/QJLpVKc_VfakfHP5IqhTMdGbflc4XkVSl-ggNZ4UElDl60JaMwyVrxw_ihyX12TRrurYDUxm5IbTqYqvVEruVg.webp" width="100" height="100"/> | <img src="https://i.pinimg.com/474x/71/c2/11/71c211b8f46513e77c33c2979e105436.jpg" width="100" height="100"/> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|                                                   🐰 **김아영**<br/>[@thay123028](https://github.com/thay123028)                                                   |                                    🧶 **김영재**<br/>[@young1042](https://github.com/young1042)                                    |                                           ⚽ **허정빈**<br/>[@jeongbin5211](https://github.com/jeongbin5211)                                            |                                              🤪 **허정우**<br/>[@JohnHeo81](https://github.com/JohnHeo81)                                               |                         🐢 **홍서연**<br/>[@seoyeon22](https://github.com/seoyeon22)                          |
-
-</div>
 <br>
 
 ## 📌 프로젝트 소개
 
-PickCook은 1인 가구와 같이 소량의 식재료를 다양하게 활용해야 하는 현대인의 라이프스타일에 맞춰 개발된 스마트 요리 플랫폼입니다.
+> PickCook은 냉장고 재료 기반 레시피 추천과 레시피-이커머스-커뮤니티를 통합한 웹 서비스입니다. <br/>
+본 저장소는 **PickCook 백엔드 API 서버**로, 인증/인가, 레시피·유저·커뮤니티 도메인 설계, 외부 스토리지 연동 및 프론트엔드와의 API 인터페이스를 담당합니다.
 
-요즘 외식 물가가 상승하면서 집에서 직접 요리하는 사람들이 늘고 있습니다. 하지만 소량으로 식재료를 구매하기 어렵고, 한 번 산 재료를 다 먹지 못해 버리는 경우가 많습니다.
-PickCook은 이러한 문제를 해결하기 위해 탄생했습니다.
-
+프론트엔드 구현 내용은 [PickCook Frontend Repository](https://github.com/seoyeon22/CookBuddy-PickCook-FE)에서 확인할 수 있습니다.
 <br/>
 
 ## 🥕 주요 기능
@@ -45,58 +33,47 @@ PickCook은 이러한 문제를 해결하기 위해 탄생했습니다.
 다른 유저들과 요리 팁을 나누고, 추천 레시피도 공유해보세요.
 PickCook은 단순한 도구를 넘어서, 함께 요리하는 즐거움을 제공합니다.
 
-<br />
-
-## 🎯 왜 PickCook인가?
-
-1인 가구, 바쁜 직장인, 냉장고에 뭐가 있는지 자꾸 잊어버리는 사람들…
-누구든 PickCook과 함께라면 재료 낭비 없이 똑똑하게 요리할 수 있습니다.
-
-<blockquote> 
-"있는 재료로 더 맛있게, 더 알뜰하게!" <br/>
-이것이 PickCook의 철학입니다.
-</blockquote>
-
 <br/>
 
-## 🔗 접속 주소
+## ✨ 데모
+**접속 주소**
+👉 [https://pick-cook.kro.kr:8443](https://pick-cook.kro.kr:8443)
 
-[https://pick-cook.kro.kr/](https://pick-cook.kro.kr/)
+**테스트 계정**
 
-<br/>
-[테스트 계정]
-
-email: test@gmail.com<br/>
+```
+email: test@gmail.com
 password: qwer1234!
+```
 
 <br/>
 
 ## 🛠️ 기술 스택
-
-### 프론트엔드
-![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
-![Pinia](https://img.shields.io/badge/Pinia-ffd859?style=for-the-badge&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ### 백엔드
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=Spring%20Boot&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white)
 ![QueryDSL](https://img.shields.io/badge/QueryDSL-0769AD?style=for-the-badge&logoColor=white)
 
-### 협업 & 기타
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+### 인프라
 ![AWS EC2](https://img.shields.io/badge/Amazon%20EC2-FF9900?style=for-the-badge&logo=Amazon%20EC2&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=FFFFFF)
-![Figma](https://img.shields.io/badge/figma-F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-![Notion](https://img.shields.io/badge/notion-000000.svg?style=for-the-badge&logo=notion&logoColor=white)
-![Discord](https://img.shields.io/badge/Discord-5865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
 
 
 <br/>
 
-## [⚙️ 사용 기술](https://github.com/beyond-sw-camp/be17-3rd-CookBuddy-PickCook/wiki/%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0)
+## ⚙️ 사용 기술
+사용 기술 선택 이유 및 적용 사례는 👉 [Wiki - 사용 기술](https://github.com/seoyeon22/CookBuddy-PickCook-BE/wiki/%E2%9A%99%EF%B8%8F-%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0)
+에서 확인할 수 있습니다.
 
 <br/>
 
-## [🔧 성능 개선](https://github.com/beyond-sw-camp/be17-3rd-CookBuddy-PickCook/wiki/%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0)
+## 🚀 성능 개선
+쿼리 최적화, 페이징, 반정규화 등 성능 개선 사례는 👉 [Wiki - 성능 개선](https://github.com/seoyeon22/CookBuddy-PickCook-BE/wiki/%F0%9F%9A%80-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0) 에서 확인할 수 있습니다.
+
+<br/>
+
+## 🏗️ 아키텍처
+소프트웨어 아키텍처와 시스템 아키텍처는 👉 [Wiki - 아키텍처](https://github.com/seoyeon22/CookBuddy-PickCook-BE/wiki/%F0%9F%8F%97%EF%B8%8F-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98) 에서 확인할 수 있습니다.
+
+
